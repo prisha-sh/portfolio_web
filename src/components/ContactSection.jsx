@@ -1,12 +1,12 @@
 import {
-  Instagram,
+  Github,
   Linkedin,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitch,
   Twitter,
+  Instagram,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -24,11 +24,12 @@ export const ContactSection = () => {
     setTimeout(() => {
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: "Thank you for your message. I will get back to you soon.",
       });
       setIsSubmitting(false);
     }, 1500);
   };
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -37,91 +38,109 @@ export const ContactSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          Let’s create something amazing together
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
-              {" "}
-              Contact Information
-            </h3>
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">
+                Contact Information
+              </h3>
+              <p className="text-muted-foreground mb-8">
+                Have a project in mind or want to discuss potential opportunities? I am always open to new collaborations and conversations.
+              </p>
+            </div>
 
-            <div className="space-y-6 justify-center">
+            <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
+                <div className="flex flex-col items-start text-left">
+                  <h4 className="font-medium">Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:prishasharma3179@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gmail.com
+                    prishasharma3179@gmail.com
                   </a>
                 </div>
               </div>
+
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
+                  <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Phone</h4>
+                <div className="flex flex-col items-start text-left">
+                  <h4 className="font-medium">Phone</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+919589942773"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    9589942773
                   </a>
                 </div>
               </div>
+
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
+                  <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
+                <div className="flex flex-col items-start text-left">
+                  <h4 className="font-medium">Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
+                    Indore, Madhya Pradesh
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
+            <div className="pt-8 border-t border-border/50 flex flex-col items-center">
+              <h4 className="font-medium mb-4 text-lg text-center">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
-                  <Linkedin />
+                <a
+                  href="https://github.com/prish-sh"
+                  target="_blank"
+                  className="p-3 bg-secondary rounded-full hover:bg-primary/20 hover:text-primary transition-all duration-300"
+                >
+                  <Github className="h-5 w-5" />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitter />
+                <a
+                  href="https://linkedin.com/in/prisha-sharma"
+                  target="_blank"
+                  className="p-3 bg-secondary rounded-full hover:bg-primary/20 hover:text-primary transition-all duration-300"
+                >
+                  <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="#" target="_blank">
-                  <Instagram />
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  className="p-3 bg-secondary rounded-full hover:bg-primary/20 hover:text-primary transition-all duration-300"
+                >
+                  <Twitter className="h-5 w-5" />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitch />
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  className="p-3 bg-secondary rounded-full hover:bg-primary/20 hover:text-primary transition-all duration-300"
+                >
+                  <Instagram className="h-5 w-5" />
                 </a>
               </div>
             </div>
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+          <div className="bg-card p-8 rounded-lg shadow-xs">
+            <h3 className="text-2xl font-semibold mb-2">Send a Message</h3>
+            <p className="text-muted-foreground mb-6">I usually respond within 24 hours</p>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Name
                 </label>
                 <input
@@ -130,7 +149,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder="Your name"
                 />
               </div>
 
@@ -139,7 +158,6 @@ export const ContactSection = () => {
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Email
                 </label>
                 <input
@@ -148,7 +166,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="your@email.com"
                 />
               </div>
 
@@ -157,7 +175,6 @@ export const ContactSection = () => {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Message
                 </label>
                 <textarea
@@ -165,7 +182,7 @@ export const ContactSection = () => {
                   name="message"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I'd like to talk about..."
+                  placeholder="Hello, I would like to talk about..."
                 />
               </div>
 
